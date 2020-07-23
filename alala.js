@@ -1,5 +1,16 @@
-function range(size, startAt = 0) {
-    return [...Array(size).keys()].map(i => i + startAt);
-}
+function decomposicao(numeroDecompoe, divisor){
+    let count = 1;
 
-console.log(range(10));
+    for(;numeroDecompoe !== divisor; count++){
+        numeroDecompoe = numeroDecompoe / divisor;
+
+        // 8 = 2
+        // 4 = 3
+        // 2 = 4
+        // 
+
+        
+    }
+    return `Log desse número ${count}`;
+}
+console.log(decomposicao(16,2));

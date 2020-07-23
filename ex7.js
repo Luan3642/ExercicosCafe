@@ -7,7 +7,7 @@ function fatorial(numero) {
 
 function exibe(numero) {
     let array = [];
-    for (let i = 0; i <=numero; i++) {
+    for (let i = 1; i <=numero; i++) {
         array.push(fatorial(i));
     }
 

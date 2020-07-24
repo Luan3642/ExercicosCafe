@@ -1,20 +1,19 @@
-function verifica(linhas, colunas ){
-    if(linhas < 1) return new Error('A linhas devem ser maior ou igual a 1');
-    if(colunas < 1) return new Error('A coluna deve ser maior o igual a 1');
-}
+function criaMatriz(linha, coluna) {
+    const matriz = Array(linha).fill(undefined);
+    matriz[1] = Array(coluna).fill(undefined);
 
-function montaMatriz(linhas, colunas){
-
-    verifica(linhas, colunas);
-    const matriz = [[linhas, colunas]];
-
-    for(let i = 1; i <= linhas.length ; i++ ){
-        for(let j = 1; j <= colunas.length; j++){
-            matriz[[linhas[i], colunas[j]]];
+    for (i in matriz) {
+        for (j in matriz) {
+            matriz[i] = Array(linha).fill(1);
+            matriz[j] = Array(coluna).fill(1);
         }
     }
     return matriz;
 
 }
 
-console.log(montaMatriz(1,2));
+const matriz = criaMatriz(3, 6);
+
+for(elemento of matriz){
+    console.log(elemento);
+}
